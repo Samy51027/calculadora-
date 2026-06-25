@@ -11,7 +11,7 @@ public class CalculadoraTrigonometrica {
         
         System.out.println("\n--- RESULTADOS ---");
         
-        // Convertimos el ángulo a radianes ya que Math.sin/cos/tan lo requieren
+        
         double radianes = Math.toRadians(alfa);
         
         System.out.println("sin(" + alfa + ") = " + Math.sin(radianes));
