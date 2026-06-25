@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class CalculadoraTrigonometrica {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("--- CALCULADORA TRIGONOMÉTRICA (CE 1101) ---");
+        System.out.println("1. Operaciones Trigonométricas (sin, cos, tan)");
+        System.out.println("2. Operaciones Inversas (arcsin, arccos, arctan)");
+        System.out.println("3. Operaciones Hiperbólicas (sinh, cosh, tanh)");
+        System.out.print("Seleccione el tipo de función: ");
+        int tipo = scanner.nextInt();
+        
+        System.out.print("Ingrese el valor del ángulo o número (alfa): ");
+        double alfa = scanner.nextDouble();
+        
+        System.out.println("\n--- RESULTADOS ---");
+        
+        switch (tipo) {
+            case 1:
+                
+                double radianes = Math.toRadians(alfa);
+                System.out.println("sin(" + alfa + "°) = " + Math.sin(radianes));
+                System.out.println("cos(" + alfa + "°) = " + Math.cos(radianes));
+                System.out.println("tan(" + alfa + "°) = " + Math.tan(radianes));
+                break;
+                
+            case 2:
+                
+                System.out.println("arcsin(" + alfa + ") = " + Math.toDegrees(Math.asin(alfa)) + "°");
+                System.out.println("arccos(" + alfa + ") = " + Math.toDegrees(Math.acos(alfa)) + "°");
+                System.out.println("arctan(" + alfa + ") = " + Math.toDegrees(Math.atan(alfa)) + "°");
+                break;
+                
+            case 3:
+                
+                System.out.println("sinh(" + alfa + ") = " + Math.sinh(alfa));
+                System.out.println("cosh(" + alfa + ") = " + Math.cosh(alfa));
+                System.out.println("tanh(" + alfa + ") = " + Math.tanh(alfa));
+                break;
+                
+            default:
+                System.out.println("Opción no válida.");
+                break;
+        }
+        
+        scanner.close();
+    }
+}
