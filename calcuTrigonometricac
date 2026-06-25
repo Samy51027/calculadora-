@@ -1,1 +1,18 @@
+import java.util.Scanner;
 
+public class CalculadoraTrigonometrica {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("--- CALCULADORA ---");
+        System.out.print("Ingrese angulo: ");
+        double alfa = scanner.nextDouble();
+        
+        
+        System.out.println("sin(" + alfa + ") = " + Math.sin(alfa));
+        System.out.println("cos(" + alfa + ") = " + Math.cos(alfa));
+        System.out.println("tan(" + alfa + ") = " + Math.tan(alfa));
+        
+        scanner.close();
+    }
+}
